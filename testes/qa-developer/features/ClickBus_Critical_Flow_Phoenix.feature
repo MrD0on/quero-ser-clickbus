@@ -9,4 +9,5 @@ Scenario: BR Critical Flow of the Clickbus Website
     And I select the dates in the appropriate search form fields in "Clickbus"
     And I select the trip search button in the "Clickbus"
   Then I should see results in the "Clickbus" Search Results Page and select one randomly
+    And I fill in the fields for checkout
  

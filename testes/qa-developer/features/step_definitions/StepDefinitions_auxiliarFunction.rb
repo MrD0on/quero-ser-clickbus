@@ -7,7 +7,7 @@ Given(/^the test configuration data has been initialized$/) do
 end
 
 When(/^I access the webpage$/) do
-  # Aqui você deverá fazer o selenium acessar o site da clickbus
+  $poDesktop.open_site()
 end
 
 And(/^I fill in search form box with my origin place and destination$/) do 
@@ -18,7 +18,7 @@ And(/^I select the dates in the appropriate search form fields in "(.*?)"$/) do 
   $ted.readEnv
   siteName = siteName + ' ' + $environment
   $poHome::CalendarCommand(siteName)
-  $poHome::ValidateDate(siteName)
+  #$poHome::ValidateDate(siteName)
 end
 
 And(/^I select the dates in results page appropriate search form fields in "(.*?)"$/) do |siteName|
@@ -62,3 +62,6 @@ And(/^I should choose the "(.*?)" payment options in the "(.*?)" checkout page$/
   $poCheckout::FillPaymentData(paymentType, siteName)
 end
 
+Then("I fill in the fields for checkout") do
+  $poDesktop.checkout()
+end

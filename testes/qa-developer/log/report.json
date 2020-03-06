@@ -1,0 +1,179 @@
+[
+  {
+    "uri": "features/ClickBus_Critical_Flow_Phoenix.feature",
+    "id": "clickbus-critical-flow-on-phoenix",
+    "keyword": "Feature",
+    "name": "Clickbus Critical Flow on Phoenix",
+    "description": "  Run through the critical flow of the Clickbus - Phoenix powered websites.",
+    "line": 1,
+    "elements": [
+      {
+        "id": "clickbus-critical-flow-on-phoenix;br-critical-flow-of-the-clickbus-website",
+        "keyword": "Scenario",
+        "name": "BR Critical Flow of the Clickbus Website",
+        "description": "",
+        "line": 5,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@ClickBus",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21900
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20200
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9300
+            }
+          },
+          {
+            "match": {
+              "location": "features/step_definitions/support/hooks.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9185697900
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the test configuration data has been initialized",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/StepDefinitions_auxiliarFunction.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104700
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I access the webpage",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/StepDefinitions_auxiliarFunction.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2358517800
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I fill in search form box with my origin place and destination",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/StepDefinitions_auxiliarFunction.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 787728500
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I select the dates in the appropriate search form fields in \"Clickbus\"",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/StepDefinitions_auxiliarFunction.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1339935400
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I select the trip search button in the \"Clickbus\"",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/StepDefinitions_auxiliarFunction.rb:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1194247200
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should see results in the \"Clickbus\" Search Results Page and select one randomly",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/StepDefinitions_auxiliarFunction.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15063626000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I fill in the fields for checkout",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/StepDefinitions_auxiliarFunction.rb:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7348593400
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/step_definitions/support/hooks.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 144892300
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-screenshot-1.0.24/lib/capybara-screenshot/cucumber.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25900
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-2.18.0/lib/capybara/cucumber.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

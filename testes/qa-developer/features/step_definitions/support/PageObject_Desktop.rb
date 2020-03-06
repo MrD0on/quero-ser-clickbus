@@ -5,10 +5,34 @@ class Desktop
     @logged = false
   end
 
-  def fill_search()
-      
-    # Aqui você deverá implementar a função para preencher os dados de origem e destino da viagem
+  def open_site()
+    visit 'https://www.clickbus.com.br'
+  end
 
+  def fill_search()
+    origin = find('input[id*=origin-place]').set 'Salvador, BA'
+    expect(page).to have_selector('.tt-menu', visible: true)
+    origin.send_keys :tab
+    destination = find('input[id*=destination-place]').set 'Aracaju, SE'
+    expect(page).to have_selector('.tt-menu', visible: true)
+    destination.send_keys :tab
+  end
+
+  def checkout()
+    find('ul li', text: '43').click()
+    click_button 'Continuar reserva'
+    @name = 'Teste Clickbus'
+    @cpf = '25872759037'
+    find('input[id=passenger_name_1').set @name
+    find('input[id*=passenger_1]').set '1164789268'
+    find('input[id=email').set 'teste@teste.com'
+    find('input[id*=customer-document-number').set @cpf 
+    find('input[id=phone]').set '75981463578'
+    find('input[id=credit-card-number]').set '5117810264429847'
+    find('input[id*=date-expiration').set '0125'
+    find('input[id*=secure-code').set '577'
+    find('input[id*=credit-card-document-number').set @cpf
+    find('input[id*=credit-card-zip-code').set '41500300'    
   end
 
   def CheckHeaderSearch(siteName)
